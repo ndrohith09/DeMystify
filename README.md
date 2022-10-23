@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# DeMystify 
+![0](https://user-images.githubusercontent.com/73429989/197376959-332cc585-c1b4-4d90-8b61-7a52e2517574.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Abstract 
+Deepfakes may be used maliciously as a source of misinformation, manipulation, harassment, and persuasion. Identifying manipulated media is a technically demanding and rapidly evolving challenge that requires collaborations across the entire tech industry and beyond.
 
-## Available Scripts
+## What it does
+DeMystify uses deep learning to assist in determining if a face is real or not. In the desired field, the user must enter the input picture. After the user inputs the image, the googlenet model processes it and delivers the results as real and fake confidence. Fastapi sends the result to the browser as a response, displaying both real and fake confidence in a progress bar. In order to aid in identification, DeMystify helps to forecast the real and fake face.
 
-In the project directory, you can run:
+![3](https://user-images.githubusercontent.com/73429989/197376943-81f35a15-af11-4689-ad4c-7cd657ab6343.png) 
+![1](https://user-images.githubusercontent.com/73429989/197376938-623215a9-ac97-4a86-8d2c-0f8fe1450726.png)
+![2](https://user-images.githubusercontent.com/73429989/197376941-8d9737be-fdf4-4c93-9447-97e7b964dcdc.png)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## How we built it
+We had 3 phase in our project . 
+- The first phase is brainstorming where we went across various articles , research papers and real life incidents . Its where we came across this idea. 
+- The second phase is planning where we decided our techstack for frontend , backend , dataset to train the model and the neural network model to be used for this project. 
+- The third phase is the implementation where we created our GUI using React JS , API using Fastapi and Deep learning model was trained using deep fake dataset in Pytorch. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Architecture of DeMystify
+![architecture](https://user-images.githubusercontent.com/73429989/197374896-a9467f9c-3639-4ea9-be95-d9a3ceabc710.png)
 
-### `npm test`
+## Deep Learning Model Phase 
+![Screenshot from 2022-10-23 09-44-04](https://user-images.githubusercontent.com/73429989/197374897-3033ad35-7409-4d4d-a3a8-013b6f155fe0.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## GoogleNet :
+![architecture](https://production-media.paperswithcode.com/models/googlenet_eq5hRP7.png)
+ 
+Paper : [https://arxiv.org/pdf/1409.4842v1.pdf](https://arxiv.org/pdf/1409.4842v1.pdf)
 
-### `npm run build`
+## Challenges we ran into
+The deep learning model we decided was GoogleNet. We had to customize some of the GoogleNet features according to our product. Creating API using FastAPI framework to handle request response for the Deep Learning Model. Making API calls using Axios library from React . Processing the desired request by the model within less time span .
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Accomplishments that we're proud of
+Using Googlenet model for identifying deep fake faces. Customizing the Googlenet model according to our project . Adjust parameters to bring a better accuracy for the model. Creating a desired GUI . Building an API using Fastapi to handle request response cycle . 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## What we learned
+Using pretrained Neural Network models. Customizing the pretrained neural network according to our product.  Usage of FastAPI . Creating GUI using React JS .
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## What's next for DeMystify
+Implement DeMystify in various platforms such as mobile application . Introduce as browser extension such that various users can find fake and real faces within a single click . Improving accuracy of the Deep Learning by tuning.
